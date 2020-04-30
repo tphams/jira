@@ -1636,8 +1636,15 @@ class JIRA(object):
         :param watcher: username of the user to remove from the watchers list
         """
         url = self._get_url('issue/' + str(issue) + '/watchers')
-        params = {'username': watcher}
-        result = self._session.delete(url, params=params)
+        result = None
+        if isinstance(watcher, dict):
+            result = self._session.delete(url, params=watcher)
+        else:
+            users = self.search_users(watcher, maxResults=1)
+            if users:
+                result = self._session.delete(url, params={'accountId': users[0].accountId})
+            else:
+                result = self._session.delete(url, params={'accountId': watcher})
         return result
 
     @translate_resource_args
@@ -2324,7 +2331,7 @@ class JIRA(object):
         :param includeInactive: If true, then inactive users are included in the results.
         """
         params = {
-            'username': user,
+            'query': user,
             'includeActive': includeActive,
             'includeInactive': includeInactive}
         return self._fetch_pages(User, None, 'user/search', startAt, maxResults, params)
