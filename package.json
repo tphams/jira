@@ -1,6 +1,6 @@
 {
-  "name": "python-jira",
-  "version": "0.0.1",
+  "name": "silverpeak_jira",
+  "version": "2.0.0",
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "spell": "npm -s run spell-files && npm -s run spell-commit",

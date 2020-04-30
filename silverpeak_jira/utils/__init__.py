@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 import threading
 
-from jira.resilientsession import raise_on_error
+from silverpeak_jira.resilientsession import raise_on_error
 
 
 class CaseInsensitiveDict(dict):

@@ -7,17 +7,17 @@ _v = VersionInfo('jira').semantic_version()
 __version__ = _v.release_string()
 version_info = _v.version_tuple()
 
-from jira.client import Comment  # noqa: E402
-from jira.client import Issue  # noqa: E402
-from jira.client import JIRA  # noqa: E402
-from jira.client import Priority  # noqa: E402
-from jira.client import Project  # noqa: E402
-from jira.client import Role  # noqa: E402
-from jira.client import User  # noqa: E402
-from jira.client import Watchers  # noqa: E402
-from jira.client import Worklog  # noqa: E402
-from jira.config import get_jira  # noqa: E402
-from jira.exceptions import JIRAError  # noqa: E402
+from silverpeak_jira.client import Comment  # noqa: E402
+from silverpeak_jira.client import Issue  # noqa: E402
+from silverpeak_jira.client import JIRA  # noqa: E402
+from silverpeak_jira.client import Priority  # noqa: E402
+from silverpeak_jira.client import Project  # noqa: E402
+from silverpeak_jira.client import Role  # noqa: E402
+from silverpeak_jira.client import User  # noqa: E402
+from silverpeak_jira.client import Watchers  # noqa: E402
+from silverpeak_jira.client import Worklog  # noqa: E402
+from silverpeak_jira.config import get_jira  # noqa: E402
+from silverpeak_jira.exceptions import JIRAError  # noqa: E402
 
 __all__ = (
     'Comment',

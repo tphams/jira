@@ -14,7 +14,7 @@ from requests.exceptions import ConnectionError
 from requests import Session
 import time
 
-from jira.exceptions import JIRAError
+from silverpeak_jira.exceptions import JIRAError
 
 logging.getLogger('jira').addHandler(NullHandler())
 

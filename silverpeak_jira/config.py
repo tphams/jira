@@ -14,7 +14,7 @@ try:
 except ImportError:
     from six.moves import configparser
 
-from jira.client import JIRA
+from silverpeak_jira.client import JIRA
 
 
 def get_jira(profile=None, url="http://localhost:2990", username="admin", password="admin", appid=None, autofix=False, verify=True):
@@ -30,7 +30,7 @@ def get_jira(profile=None, url="http://localhost:2990", username="admin", passwo
 
     Usage:
 
-        >>> from jira.config import get_jira
+        >>> from silverpeak_jira.config import get_jira
         >>>
         >>> jira = get_jira(profile='jira')
 

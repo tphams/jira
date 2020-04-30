@@ -15,8 +15,8 @@ from six.moves.urllib.parse import parse_qsl
 
 import argparse
 from getpass import getpass
-from jira import __version__
-from jira import JIRA
+from silverpeak_jira import __version__
+from silverpeak_jira import JIRA
 from oauthlib.oauth1 import SIGNATURE_RSA
 import os
 import requests

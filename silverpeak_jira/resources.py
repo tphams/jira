@@ -22,9 +22,9 @@ from six import iteritems
 from six import string_types
 from six import text_type
 
-from jira.utils import CaseInsensitiveDict
-from jira.utils import json_loads
-from jira.utils import threaded_requests
+from silverpeak_jira.utils import CaseInsensitiveDict
+from silverpeak_jira.utils import json_loads
+from silverpeak_jira.utils import threaded_requests
 
 __all__ = (
     'Resource',
